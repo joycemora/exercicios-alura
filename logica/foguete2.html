@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function mostra(conteudo) {
+            document.write(conteudo);
+        }
+
+        function pulaLinha() {
+            mostra("<br>")
+        }
+
+        // ~~~~~~~~~~~~Jogo do jokenpo~~~~~~~~~~~~~
+
+        var respMaquina = "";
+        let maxRan = 3;
+        let minRan = 1;
+
+        function Apertar() {
+            let numAleatorio = Math.floor(Math.random() * (maxRan - minRan + 1)) + minRan;
+            if (numAleatorio == 1) {
+                var respMaquina = "pedra";
+            };
+            if (numAleatorio == 2) {
+                var respMaquina = "papel";
+            };
+            if (numAleatorio == 3) {
+                var respMaquina = "tesoura";
+            };
+            var decisaoPlayer = document.getElementById("decisao");
+            if (decisaoPlayer.value != "tesoura" && decisaoPlayer.value != "papel" && decisaoPlayer.value != "pedra") {
+                alert("Escolha entre papel, pedra ou tesoura!");
+                return;
+            }
+            else {
+                alert("Você escolheu: " + decisaoPlayer.value + " e a máquina jogou: " + respMaquina);
+                if ((decisaoPlayer.value == "pedra" && respMaquina == "tesoura") || (decisaoPlayer.value == "papel" && respMaquina == "pedra") || (decisaoPlayer.value == "tesoura" && respMaquina == "papel")) {
+                    alert("Parabens! Você ganhou!");
+                }
+                if ((decisaoPlayer.value == "pedra" && respMaquina == "papel") || (decisaoPlayer.value == "papel" && respMaquina == "tesoura") || (decisaoPlayer.value == "tesoura" && respMaquina == "pedra")) {
+                    alert("Que pena! Você perdeu!");
+                }
+                if ((decisaoPlayer.value == "pedra" && respMaquina == "pedra") || (decisaoPlayer.value == "papel" && respMaquina == "papel") || (decisaoPlayer.value == "tesoura" && respMaquina == "tesoura")) {
+                    alert("Que sorte! Houve empate...");
+                }
+            }
+        }
+
+        // ~~~~~~~~~~~~Jogo do jokenpo~~~~~~~~~~~~~
+
+
+
+
+        var nome = prompt("Bem vindo ao mundo dos jogos! Qual é seu nome?");
+        mostra("Vamos ao que importa, " + nome + ".");
+        pulaLinha();
+        mostra("Você é bom de pedra-papel-tesoura? Vamos descobrir.");
+        pulaLinha();
+        pulaLinha();
+        mostra("<input id='decisao'>")
+        mostra("<button onclick='Apertar()'  style='cursor: pointer;'>Jo-Ken-Po!</button>");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function pulaLinha(){
+            document.write("<br><br>");
+        }
+
+        function lancarFoguete() {
+            document.write("^^^^^^^^^^^^^^^^^Lançamento autorizado^^^^^^^^^^^^^^^^^^^^^^^^");
+            pulaLinha();
+            document.write("====^ENTRANDO NA CAMADA TROPOSFERA [15KM]^======");
+            pulaLinha();
+            troposfera();
+        }
+
+        function troposfera() {
+            document.write("====^ENTRANDO NA CAMADA ESTRATOSFERA [50KM]^====");
+            pulaLinha();
+            estratosfera();
+        }
+
+        function estratosfera() {
+            document.write("====^ENTRANDO NA CAMADA MESOSFERA [80KM]^=======");
+            pulaLinha();
+            mesosfera();
+        }
+
+        function mesosfera() {
+            document.write("====^ENTRANDO NA CAMADA TERMOSFERA [500KM]^=====");
+            pulaLinha();
+            termosfera();
+        }
+
+        function termosfera() {
+            document.write("====^ENTRANDO NA CAMADA EXOSFERA [500KM]^=======");
+            pulaLinha();
+            exosfera();
+        }
+
+        function exosfera() {
+            document.write("====^VOCÊ CHEGOU A EXOSFERA^=====================");
+            pulaLinha();
+            document.write("************(SATÉLITES)********(TELESCÓPIOS)************");
+            pulaLinha();
+            document.write("====v SAINDO DA EXOSFERA v=========================");
+            pulaLinha();
+            saindoExosfera();
+        }
+
+        function saindoExosfera() {
+            document.write("====v SAINDO DA TERMOSFERA v======================");
+            pulaLinha();
+            saindoTermosfera();
+        }
+
+        function saindoTermosfera() {
+            document.write("====v SAINDO DA MESOSFERA v=======================");
+            pulaLinha();
+            saindoMesosfera();
+        }
+        function saindoMesosfera() {
+            document.write("====v SAINDO DA ESTRATOSFERA v=====================");
+            pulaLinha();
+            saindoEstratosfera();
+        }
+        function saindoEstratosfera() {
+            document.write("====v SAINDO DA TROPOSFERA v=======================");
+            pulaLinha();
+            aterrissagem();
+        }
+        function aterrissagem() {
+            docuemtn.write("Aterrissagem Perfeita!<br>Você chegou ao seu Destino!");
+        }
+
+        document.write("<button>Lançar foguete!</button>");
+        var button = document.querySelector("button");
+        button.onclick = lancarFoguete;
+        pulaLinha;
+    </script>
+
+</body>
+
+</html>
